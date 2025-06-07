@@ -14,7 +14,10 @@ pipeline {
 
     stage('Build Maven App') {
       steps {
-        sh 'mvn clean package -DskipTests'
+        sh '''
+          export PATH=/opt/apache-maven/bin:$PATH
+          mvn clean package -DskipTests
+        '''
       }
     }
 
@@ -37,11 +40,11 @@ pipeline {
 
     stage('Run Docker Container') {
       steps {
-        sh """
+        sh '''
           docker stop calculator-container || true
           docker rm calculator-container || true
           docker run -d --name calculator-container -p 8080:8080 $IMAGE_NAME
-        """
+        '''
       }
     }
   }
@@ -55,4 +58,3 @@ pipeline {
     }
   }
 }
-    
