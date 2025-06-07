@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Clone Repository') {
       steps {
-        git branch: 'project-1', url: 'https://github.com/rutheki24/proj-mdp-152-155.git'
+        git branch: 'Project-1', url: 'https://github.com/rutheki24/proj-mdp-152-155.git'
       }
     }
 
