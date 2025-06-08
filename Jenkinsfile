@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    IMAGE_NAME = 'ruth123/calculator-app'  // Change to your Docker Hub repo
+    IMAGE_NAME = 'ruthp123/calculator-app'  // Change to your Docker Hub repo
   }
 
   stages {
