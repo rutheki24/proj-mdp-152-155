@@ -43,7 +43,7 @@ pipeline {
         sh '''
           docker stop calculator-container || true
           docker rm calculator-container || true
-          docker run -d --name calculator-container -p 8080:8080 $IMAGE_NAME
+          docker run -d --name calculator-container -p 8081:8080 $IMAGE_NAME
         '''
       }
     }
