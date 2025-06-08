@@ -51,7 +51,7 @@ pipeline {
 
   post {
     success {
-      echo '✅ Application container is running on http://<EC2-IP>:8080'
+      echo '✅ Application container is running on http://<EC2-IP>:8081'
     }
     failure {
       echo '❌ Build or container run failed.'
